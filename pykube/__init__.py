@@ -7,6 +7,7 @@ from .exceptions import KubernetesError, PyKubeError, ObjectDoesNotExist  # noqa
 from .http import HTTPClient  # noqa
 from .objects import (  # noqa
     object_factory,
+    App,
     ConfigMap,
     CronJob,
     DaemonSet,

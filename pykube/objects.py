@@ -119,6 +119,14 @@ class APIObject(object):
         self.api.raise_for_status(r)
         self.set_obj(r.json())
 
+    def replace(self):
+        self.obj = obj_merge(self.obj, self._original_obj)
+        r = self.api.put(**self.api_kwargs(
+            data=json.dumps(self.obj),
+        ))
+        self.api.raise_for_status(r)
+        self.set_obj(r.json())
+
     def delete(self):
         r = self.api.delete(**self.api_kwargs())
         if r.status_code != 404:
@@ -473,3 +481,9 @@ class PodSecurityPolicy(APIObject):
     version = "extensions/v1beta1"
     endpoint = "podsecuritypolicies"
     kind = "PodSecurityPolicy"
+
+class App(APIObject):
+
+    version = "klot.io/v1"
+    endpoint = "apps"
+    kind = "App"

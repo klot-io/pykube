@@ -3,9 +3,6 @@ import sys
 from setuptools import setup, find_packages
 
 
-with open("README.rst") as fp:
-    long_description = fp.read()
-
 install_requires = [
     "requests>=2.12",
     "PyYAML",
@@ -20,13 +17,12 @@ if sys.version_info < (3,):
 
 setup(
     name="pykube",
-    version="0.16a1",
+    version="0.17",
     description="Python client library for Kubernetes",
-    long_description=long_description,
-    author="Eldarion, Inc.",
-    author_email="development@eldarion.com",
+    author="Kloud of Things I/O",
+    author_email="gaffer.fitch@gmail.com",
     license="Apache",
-    url="https://github.com/kelproject/pykube",
+    url="https://github.com/klot-io/pykube",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",

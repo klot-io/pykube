@@ -17,6 +17,7 @@ from .objects import (  # noqa
     HorizontalPodAutoscaler,
     Ingress,
     Job,
+    KlotIOApp,
     LimitRange,
     Namespace,
     Node,

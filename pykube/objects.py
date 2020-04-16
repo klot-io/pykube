@@ -479,3 +479,9 @@ class App(APIObject):
     version = "klot.io/v1"
     endpoint = "apps"
     kind = "App"
+
+class KlotIOApp(APIObject):
+
+    version = "klot.io/v1"
+    endpoint = "klotioapps"
+    kind = "KlotIOApp"

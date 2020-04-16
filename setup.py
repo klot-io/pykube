@@ -17,7 +17,7 @@ if sys.version_info < (3,):
 
 setup(
     name="pykube",
-    version="0.17",
+    version="0.18",
     description="Python client library for Kubernetes",
     author="Kloud of Things I/O",
     author_email="gaffer.fitch@gmail.com",
